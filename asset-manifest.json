@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/testrepo/static/css/main.0cbf19db.css",
-    "main.js": "/testrepo/static/js/main.01117956.js",
-    "static/js/787.28cb0dcd.chunk.js": "/testrepo/static/js/787.28cb0dcd.chunk.js",
-    "index.html": "/testrepo/index.html",
-    "main.0cbf19db.css.map": "/testrepo/static/css/main.0cbf19db.css.map",
-    "main.01117956.js.map": "/testrepo/static/js/main.01117956.js.map",
-    "787.28cb0dcd.chunk.js.map": "/testrepo/static/js/787.28cb0dcd.chunk.js.map"
+    "main.css": "/my-app/static/css/main.0cbf19db.css",
+    "main.js": "/my-app/static/js/main.3caa18e5.js",
+    "static/js/787.28cb0dcd.chunk.js": "/my-app/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/my-app/index.html",
+    "main.0cbf19db.css.map": "/my-app/static/css/main.0cbf19db.css.map",
+    "main.3caa18e5.js.map": "/my-app/static/js/main.3caa18e5.js.map",
+    "787.28cb0dcd.chunk.js.map": "/my-app/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0cbf19db.css",
-    "static/js/main.01117956.js"
+    "static/js/main.3caa18e5.js"
   ]
 }
