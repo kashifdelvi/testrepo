@@ -10,7 +10,7 @@ import { BrowserRouter } from "react-router-dom";
 const root = ReactDOM.createRoot(document.getElementById('zomato'));
 root.render(
     <React.StrictMode>
-        <BrowserRouter basename="/testrepo">
+        <BrowserRouter basename='/testrepo'>
             <App />
         </BrowserRouter>
   </React.StrictMode>

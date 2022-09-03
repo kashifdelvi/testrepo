@@ -12,9 +12,9 @@ function App() {
   return (
     <div>
       <Nav/>
-      <Routes>
+      <Routes >
         <Route path="/" element={<QuickSearchContainer />} />
-        <Route  path="food" element={<Foods />} >
+        <Route path="food" element={<Foods />} >
             <Route path=":id" element={<FoodDetails />} />
             <Route index path="items" element={<FoodList/>} />
         </Route>

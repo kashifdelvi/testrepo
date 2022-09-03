@@ -1,20 +1,19 @@
 import Nav from 'react-bootstrap/Nav';
-
+import {Link} from 'react-router-dom'
 function Foods() {
     return (
-        <Nav
-        >
+        <Nav>
             <Nav.Item>
-                <Nav.Link href="/">Home</Nav.Link>
+                <Link to="/">Home</Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link href="/food">Food</Nav.Link>
+                <Link to="food">Food</Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link href="/food/items">Food Items</Nav.Link>
+                <Link to="food/items">Food Items</Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link href="/food/123">Food List</Nav.Link>
+                <Link to="others">404</Link>
             </Nav.Item>
             
         </Nav>
