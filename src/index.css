@@ -19,7 +19,7 @@ code {
 .imageContainer{
   color:#fff;
   height: 600px;
-  background-image: url('http://localhost:3000/images/shutterstock_348320018.png');
+  background-image: url('/src/images/shutterstock_348320018.png');
 }
 
 

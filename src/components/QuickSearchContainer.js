@@ -52,7 +52,7 @@ function QuickSearchContainer(props) {
             </Row>
             <Row>
                 {categories.map((item, index) =>
-                    <Col lg={3} sm={12}>
+                    <Col lg={3} sm={12} key={index}>
                         <CategoryCard
                             key={index}
                             name={item.name}
