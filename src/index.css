@@ -15,3 +15,24 @@ code {
 .selected {
   background-color: yellow;
 }
+
+.imageContainer{
+  color:#fff;
+  height: 600px;
+  background-image: url('http://localhost:3000/images/shutterstock_348320018.png');
+}
+
+
+.imageContainer h3{
+  text-align: center;
+  margin-top: 200px;
+  color:#fff;
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+.heroImage{
+  width: 100%;
+  height: 600px;
+}
+

@@ -1,68 +1,70 @@
-import FodCard3 from './FoodCard3';
-import {useState,useEffect} from 'react';
-import axios from "axios";
+import CategoryCard from "./CategoryCard";
+// import ImageContainer from "./ImageContainer";
+import FilterByLocation from "./FilterByLocation";
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import {Container} from 'react-bootstrap';
+import React from 'react';
 
-function QuickSearchContainer() {
-    const [foods,setFood] = useState([]);
-    const [counter,setCounter] = useState(0);
 
-    useEffect(() => {
-        loadFoods()
-    },[]);
-    
+function QuickSearchContainer(props) {
+
+    const categories = [
+        {
+            'name': 'Breakfast',
+            'description': 'Start your day with exclusive breakfast options',
+            'image': 'images/shutterstock_1154073754.png'
+        },
+        {
+            'name': 'Lunch',
+            'description': 'Start your day with exclusive breakfast options',
+            'image': 'images/lunch.png'
+        },
+        {
+            'name': 'Dinner',
+            'description': 'Start your day with exclusive breakfast options',
+            'image': 'images/dinner.png'
+        },
+        {
+            'name': 'Snacks',
+            'description': 'Start your day with exclusive breakfast options',
+            'image': 'images/snacks.png'
+        },
+        {
+            'name': 'Drink',
+            'description': 'Start your day with exclusive breakfast options',
+            'image': 'images/drink.png'
+        },
+        {
+            'name': 'Night Life',
+            'description': 'Start your day with exclusive breakfast options',
+            'image': 'images/night.png'
+        }
+
+    ]
+
     return (
-            <div>
-                {
-                    foods.map((food,index)=>{
-                        return <FodCard3 
-                                key={index}
-                                foodItem={food}
-                            />
-                    })
-                }    
-                <button onClick={addItem}>
-                    Add FoodCard
-                </button>
-
-                <button onClick={addConter}>
-                    Counter
-                </button>
-
-               
-            </div>
+        <Container>
+            <FilterByLocation/>
+            <Row>
+                <h3>Quick Searches</h3>
+                <h3>Discover resturants by type of meal</h3>
+            </Row>
+            <Row>
+                {categories.map((item, index) =>
+                    <Col lg={3} sm={12}>
+                        <CategoryCard
+                            key={index}
+                            name={item.name}
+                            image={item.image}
+                            description={item.description}
+                        />
+                    </Col>
+                )}
+            </Row>
+        </Container>
     );
-      
-    function loadFoods(){
-    
-            axios.get('http://localhost:9191/getFood').then(res=>{
-                const result = res.data;
-                if(result.status === 200){
-                    setFood(result.data);
-                }
-            })
-    }
-
-    function addConter(){
-        setCounter(counter+1)
-    }
-    function addItem(){
-        const payload = {
-                "name": "Vada",
-                "cost": "10",
-                "cuisine": "breakfast",
-                'image':'https://github.com/DivyashantKumar/staticWebPageCollection/blob/main/images/1image.png?raw=true',
-                "availableAt": [
-                    "63024059b37346bbf1fccd0f"
-                ]
-        };
-       
-        axios.post('http://localhost:9191/addFood',payload).then(res=>{
-                const result = res.data;
-                if(result.status === 200){
-                    setFood([...foods,payload])
-                }
-        })
-    }
 }
+
 
 export default QuickSearchContainer;
